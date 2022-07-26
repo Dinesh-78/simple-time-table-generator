@@ -1,0 +1,28 @@
+<html xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<link href="login.css" rel="stylesheet" />
+</head>
+<body>
+ <h2>Login Page</h2><br/>    
+       
+    <h:form class= "log">    
+           username 
+        <h:inputText value="#{user.uname}" id="name" validatorMessage="Value is required" >  
+        	<f:validateRequired/>
+        	 </h:inputText >
+			   <h:message for="name" style="color:red" />  
+        
+         <br/> <br/> 
+            password
+        <h:inputText value="#{user.pass}" id="pass" validatorMessage="minimum 8 characters" >
+        <f:validateLength minimum="8" maximum="10" />
+				    </h:inputText>
+				    <h:message for="pass" style="color:red"/>   
+        <br/> <br/>   
+        <h:commandButton class="submit" action="response" value="Login" />       
+        <br/>  
+     </h:form>     
+</body>
+
+</html>

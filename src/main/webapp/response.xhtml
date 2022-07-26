@@ -1,0 +1,57 @@
+<html xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+
+</head>
+<body>
+<h2>Welcome #{user.uname}</h2>
+<h3>Your time table</h3>
+<h:form>
+   
+   <h:dataTable  value="#{data.list}" var="row" border="2">
+  
+      <h:column>
+         <f:facet name="header">1(9:00-10:45)</f:facet>
+         #{row.fir} 
+         
+             
+      </h:column>
+      <h:dataTable value="#{data.list}"></h:dataTable>
+      <h:column>
+         <f:facet name="header">2(11:00-12:40)</f:facet>
+         #{row.sec}
+             
+      </h:column>
+      <h:dataTable value="#{data.list}"></h:dataTable>
+      <h:column>
+         <f:facet name="header">1(1:30-3:00)</f:facet>
+         #{row.thi}
+             
+      </h:column>
+      <h:dataTable value="#{data.list}"></h:dataTable>
+      <h:column>
+         <f:facet name="header">1(3:10-4:30)</f:facet>
+         #{row.fou}
+             
+      </h:column>
+      <h:dataTable value="#{data.list}"></h:dataTable>
+      <h:column>
+         <f:facet name="header">1(4:30-5:00)</f:facet>
+         #{row.fiv}
+             
+      </h:column>
+      <h:dataTable value="#{data.list}"></h:dataTable>
+      <h:column>
+         <f:facet name="header">day</f:facet>
+         #{row.day}
+             
+      </h:column>
+      
+      </h:dataTable>
+      
+      </h:form>
+
+</body>
+
+</html>
